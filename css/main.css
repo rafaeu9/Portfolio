@@ -1,23 +1,72 @@
- body {
- background-image: url("../images/backgorund.png");
- background-color: #cccccc;
+body {
+  background-image: url("../images/backgorund.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2em; /* 2 times the size of the parent */
+}
+p {
+  font-size: 120%; /* 120% of the parent element */
+}
+
+.Content{
+  max-width:1500px;
+  margin: auto;
 }
 
 .Introduction {
-    display: flex;
-    align-items: center; /* Align items vertically (optional) */
-    justify-content: space-between;
-    background-color: white; /* White background */
-    margin: 2%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: auto;
+  margin-bottom: 5% 
 }
 
 .Introduction-text{
-    flex: 1;
-    margin-right: 1%;
+  flex: 1;
+  margin: auto;
+  padding: 5%;
 }
 
 .Introduction-image img {
-    width: height - 5%; /* Set desired width for the image */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fits well */
-  }
+  width: auto; /* Set desired width for the image */
+  height: 100%; /* Maintain aspect ratio */
+}
+
+.Skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  color: white;
+ }
+
+.Skills-Technical,
+.Skills-Education,
+.Skills-Hobies {
+  flex: 1 1 0;
+  padding: 5px;
+} 
+
+.Contacts{
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+.Contacts-Address,
+.Contacts-Phone,
+.Contacts-Email {
+  background-color: white; 
+  flex: 1 1 0;
+  margin:1px;
+  text-align: center;
+  display: flex; /* Makes the individual box a flex container */
+  flex-direction: column;
+  align-items: center; /* Centers text vertically inside each box */
+  justify-content: center; /* Ensures horizontal centering for the text */
+}
