@@ -2,3 +2,22 @@
  background-image: url("../images/backgorund.png");
  background-color: #cccccc;
 }
+
+.Introduction {
+    display: flex;
+    align-items: center; /* Align items vertically (optional) */
+    justify-content: space-between;
+    background-color: white; /* White background */
+    margin: 2%;
+}
+
+.Introduction-text{
+    flex: 1;
+    margin-right: 1%;
+}
+
+.Introduction-image img {
+    width: height - 5%; /* Set desired width for the image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fits well */
+  }
