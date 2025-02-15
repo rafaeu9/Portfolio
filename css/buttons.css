@@ -70,6 +70,7 @@ ul.social-icons {
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition: .5s;
+    cursor: pointer;
 }
 
 .button-cv:hover {
