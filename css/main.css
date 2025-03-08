@@ -130,3 +130,18 @@ p {
   align-items: center; /* Centers text vertically inside each box */
   justify-content: center; /* Ensures horizontal centering for the text */
 }
+
+/* Style for the veil */
+#veil {
+  position: fixed; /* Fixed position to cover the entire page */
+  top: 0;           /* Top of the page */
+  left: 0;          /* Left of the page */
+  width: 100vw;     /* Full width of the viewport */
+  height: 100vh;    /* Full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent white background */
+  z-index: 9998;    /* Ensure it's above other content */
+}
+
+.lock-scroll {
+  overflow: hidden; /* Disable scrolling */
+}
