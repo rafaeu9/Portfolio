@@ -1,22 +1,27 @@
 /* Style for the overlay */
 .container {
     position: fixed; /* Fixed position to stay on top of the page */
-    top: 20px;       /* Distance from the top */
-    left: 20px;      /* Distance from the left */
-    right: 20px;     /* Distance from the right */
-    bottom: 20px;    /* Distance from the bottom */
     background-color: white; /* White background */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Move back by half the width & height */
     z-index: 9999; /* Ensure it stays above other content */
     border-radius: 15px; /* Optional: Rounds the corners of the overlay */
-    overflow: auto; /* Enables scrolling */
-    max-height: 90vh; /* Restrict the height to 90% of the viewport height */
+    overflow-y: auto; /* Enables scrolling */
+    overflow-x: hidden;
+    height: 90vh; /* Restrict the height to 90% of the viewport height */
+    width:  75vw ;
 }
 
-/* Main content inside the overlay */
 .content {
-    padding: 20px;
-    max-height: 100%; /* Make sure the content fits in the scrollable area */
-    overflow-y: auto; /* Enables vertical scrolling */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    /* padding: 20px; */
+    width: 100%; /* Ensure it stretches properly */    
+    max-height: 90vh; /* Prevent content from overflowing */
 }
 
 /* Optional: Style for the content */
@@ -27,12 +32,12 @@ p {
 /* Style for the exit button */
 .exit-button {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 10px;
     background-color: transparent;
     border: none;
     color: violet;
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
     cursor: pointer;
     padding: 5px 10px;
