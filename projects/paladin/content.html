@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" onClick="exitConainer()" class="exit-button">x</button>
+        <div class="content">
+            <h1>Paladin</h1>
+            <p>This game was made as part of a university project, in it, I had to create a Paladin class with the abilities below, enemies and map you can see the video.</p>
+            <div class="Buttons">
+                <a href="projects\paladin\Paladin.apk" download style="text-decoration: none;">
+                    <button type="button" class="button-cv">Download</button>
+                </a>
+                <button type="button" onclick="window.open('https://github.com/rafaeu9/Paladin')" class="button-cv">Source Code</button>
+            </div>
+
+            <video width="auto" height="500"  style="padding-block: 20px;" controls>
+                <source src="projects\paladin\Paladin.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+
+            <h1>Description</h1>
+
+            <p>The game was supposed to run in Android, so I had to work with touch screen inputs and optimize the game to run well.<br \>
+            I worked as well with UI to so that the player could control the character and understand better what is going on in the game.</p>
+
+            <div class="gallery-container">
+                <button class="scroll-btn left" onclick="scrollGallery(-500)">&#10094;</button>
+                <div class="gallery" id="imageGallery">
+                    <img src="projects\paladin\Print\0.png" alt="Image 0">
+                    <img src="projects\paladin\Print\1.png" alt="Image 1">
+                    <img src="projects\paladin\Print\2.png" alt="Image 2">
+                    <img src="projects\paladin\Print\3.png" alt="Image 3">
+                    <img src="projects\paladin\Print\4.png" alt="Image 4">
+                    <img src="projects\paladin\Print\5.png" alt="Image 5">
+                    <img src="projects\paladin\Print\6.png" alt="Image 6">
+                    <img src="projects\paladin\Print\10.png" alt="Image 10">
+
+                </div>
+                <button class="scroll-btn right" onclick="scrollGallery(500)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</body>

@@ -73,3 +73,7 @@ function exitConainer() {
     $(veil).remove();
     body.classList.remove('lock-scroll');
 }
+
+function scrollGallery(amount) {
+    document.getElementById('container').shadowRoot.getElementById('imageGallery').scrollBy({ left: amount, behavior: 'smooth' });
+}

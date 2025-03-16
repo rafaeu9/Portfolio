@@ -14,14 +14,13 @@
 }
 
 .content {
-    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    /* padding: 20px; */
-    width: 100%; /* Ensure it stretches properly */    
-    max-height: 90vh; /* Prevent content from overflowing */
+    height: auto;    
+    max-width: 800px;  
+    margin: 0 auto;  /* Centers it horizontally */
 }
 
 /* Optional: Style for the content */
@@ -52,4 +51,74 @@ p {
 
 .exit-button:focus {
     outline: none; /* Remove the default focus outline */
+}
+
+.image {
+    padding: 20px; /* Adds space on all sides */
+}
+
+/*---------------Gallary-------------*/
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    padding: 50px;    
+    margin: 0 auto;  /* Centers it horizontally */
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    width: 85%;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome & Safari */
+}
+
+.gallery img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center button vertically and horizontally */
+    background: rgba(85, 14, 155, 1); /* Button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50px; /* Set width */
+    height: 50px; /* Set height equal to width */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center; /* Centers text/icon inside the button */
+    align-items: center; /* Centers text/icon inside the button */
+    font-size: 24px; /* Button text/icon size */
+    text-align: center;
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
 }
