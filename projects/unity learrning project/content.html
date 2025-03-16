@@ -1,0 +1,51 @@
+<head>
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" onClick="exitConainer()" class="exit-button">x</button>
+        <div class="content">
+            <h1>UNITY LEARNING</h1>
+            <p>This project was made as a university assessment and is composed of 8 challenges focused on Unity learning.</p>
+            <div class="Buttons">
+                <a href="projects\unity learrning project\Learning Unity Project.zip" download style="text-decoration: none;">
+                    <button type="button" class="button-cv">Download</button>
+                </a>
+                <button type="button" onClick="window.open('https://github.com/rafaeu9/Unity-Learrning-Project')" class="button-cv">Source Code</button>
+            </div>
+
+            <video width="auto" height="500"  style="padding-block: 20px;" controls>
+                <source src="projects\unity learrning project\Unity Learning.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+
+            <h1>In them I covered:</h1>
+            <ul>
+                <li>Core Scripting</li>
+                <li>Input Programming</li>
+                <li>Physics Based Off Collision</li>
+                <li>Physics Based Off Raycast</li>
+                <li>2D Tiles and Sprites</li>
+                <li>Animation Programming</li>
+                <li>UI Programming</li>
+                <li>Audio Programming</li>
+            </ul> 
+
+            <div class="gallery-container">
+                <button class="scroll-btn left" onclick="scrollGallery(-500)">&#10094;</button>
+                <div class="gallery" id="imageGallery">
+                    <img src="projects\unity learrning project\prints\Untitled.png" alt="Image 1">
+                    <img src="projects\unity learrning project\prints\Untitled2.png" alt="Image 2">
+                    <img src="projects\unity learrning project\prints\Untitled3.png" alt="Image 3">
+                    <img src="projects\unity learrning project\prints\Untitled4.png" alt="Image 4">
+                    <img src="projects\unity learrning project\prints\Untitled5.png" alt="Image 5">
+                    <img src="projects\unity learrning project\prints\Untitled6.png" alt="Image 6">
+                    <img src="projects\unity learrning project\prints\Untitled7.png" alt="Image 7">
+                    <img src="projects\unity learrning project\prints\Untitled8.png" alt="Image 8">
+                </div>
+                <button class="scroll-btn right" onclick="scrollGallery(500)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</body>

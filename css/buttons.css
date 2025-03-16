@@ -1,0 +1,78 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+.introduction-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-icons {
+    width: 75%;
+    display:block;
+    margin: 0 auto;
+    position: relative;
+    text-align: right;
+}
+
+ul.social-icons {
+    float: none;
+    position: absolute;
+    right: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-twitter,
+.fa-linkedin,
+.fa-github{
+    padding:15px 20px;
+    margin-inline: 2px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #550e9b;
+}
+
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+
+.fa-github:hover {
+    background-color: #000000;
+}
+.button-cv {
+    width: auto;
+    background-color: #550e9b; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.button-cv:hover {
+    background-color: #b434eb;
+}
