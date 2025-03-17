@@ -1,11 +1,11 @@
-function getFolders() {
+function getFolders(path, container) {
     $.ajax({
-        url: '/projects', // URL to fetch directories
+        url: path, // URL to fetch directories
         type: 'GET',
         dataType: 'json', // Expecting a JSON response
         success: function(directories) {
             directories.forEach(function(dir) {
-                loadContent("/projects/" + dir); // Call the loadContent function for each directory
+                loadContent(path + '/' + dir, container); // Call the loadContent function for each directory
             });
         },
         error: function(error) {
@@ -15,12 +15,12 @@ function getFolders() {
     });
 }
 
-function loadContent(path) {
+function loadContent(path, container) {
     $.ajax({
         url: path + "/projects.html", // Path to the HTML content
         type: 'GET',
         success: function(data) {
-            $(".best-projects").append(data); // Inject the content into the best-projects div
+            $(container).append(data); // Inject the content into the best-projects div
         },
         error: function(error) {
             console.error("Error loading content:", error);
@@ -30,8 +30,8 @@ function loadContent(path) {
 }
 
 $(document).ready(function() {
-    getFolders(); // Fetch the folders once the DOM is ready
-    
+    getFolders('/best-projects', ".best-projects-container");
+    getFolders('/projects', ".projects-container");
 });
 
 $.fn.shadow = function() {
@@ -44,14 +44,14 @@ function createContainer(file){
     var body = document.getElementsByTagName("body")[0],
         veil = document.createElement("div"),
         container = document.createElement("div");
-    
+
     veil.id = "veil";
     $(body).append(veil);
 
     veil.style.display = 'block'; // Show the veil
     body.classList.add('lock-scroll'); // Lock scrolling
-    
-    
+
+
     container.id = "container";
     $(body).append(container);
 

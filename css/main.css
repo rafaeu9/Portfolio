@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #cccccc;
+  color: white;
   font-family: Verdana, sans-serif;
 }
 
@@ -35,6 +36,7 @@ p {
 }
 
 .introduction-text {
+  color: black;
   flex: 0 1 auto; /* Prevents excessive growth */
   margin: auto;
   padding: 5%;
@@ -64,14 +66,16 @@ p {
   border: 2px solid white; /* 2px thick, solid style, white color */
   border-radius: 15px;
 }
-.best-projects {
+.projects-container,
+.best-projects-container {
+    color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.best-projects-1 {
+.projects {
     background-color: white;
     height: 600px;
     width: 500px;
@@ -81,18 +85,18 @@ p {
     align-items: center;
 }
 
-.best-projects-1-image {
+.projects-image {
     height: 55%;
     width: 100%;
     overflow: hidden;
 }
 
-.best-projects-1 img {
+.projects img {
     height: auto;
     width: 100%;
 }
 
-.best-projects-1-text { 
+.projects-text {
   padding-inline: 5%;
   padding-bottom: 1%;
   display: flex;
@@ -101,7 +105,7 @@ p {
   justify-content: center;
 }
 
-.best-projects-1-text * {
+.projects-text * {
   margin: 7px 0; /* Reduce top & bottom margins */
   padding: 0;
 }
@@ -113,14 +117,16 @@ p {
 
 .work,
 .education{
-    background: white;
-    padding: 2%;
-    margin:1%;
-    width: 80%;
-    border-radius: 25px;
+  color: black;
+  background: white;
+  padding: 2%;
+  margin:1%;
+  width: 80%;
+  border-radius: 25px;
 }
 
 .contacts{
+  color: black;
   margin-top: 5%;
   display: flex;
   flex-direction: row;
