@@ -50,22 +50,27 @@ p {
 
 .skills {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   color: white;
-  gap: 20px;
+  gap: 10px;
+  width: 75vw;
+  max-width: 1500px;
  }
 
-.skills-Technical,
-.skills-Education,
-.skills-Hobies {
+.skills-Technical {
   flex: 1 1 0;
-  margin-bottom: 5%;
-  max-width: 500px;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  min-width: 200px;
+  max-width: 200px;
   border: 2px solid white; /* 2px thick, solid style, white color */
   border-radius: 15px;
 }
+
 .projects-container,
 .best-projects-container {
     color: black;
