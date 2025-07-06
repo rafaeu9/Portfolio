@@ -2,7 +2,7 @@ body {
   /* background-image:/ url("../images/backgorund.png"); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #371f58 ;
+  background-color: #101113 ;
   color: white;
   font-family: Verdana, sans-serif;
   scroll-behavior: smooth; /* Smooth scroll on click */
@@ -35,14 +35,14 @@ p {
   width: 100%;
   top: 0px;
   left: 0px;
-  background: white;
+  background: #2b2c2e;
   padding: 10px;
   z-index: 1000;
 }
 
 .fixed-menu a {
   display: block;
-  color: #333;
+  color: white;
   text-decoration: none;
   padding-inline: 10px;
   font-weight: bold;
@@ -50,13 +50,13 @@ p {
 }
 
 .fixed-menu a:hover {
-  color: #1d4ed8; /* Blue on hover */
+  color: #8340c5; /* Blue on hover */
 }
 
 .introduction {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: #2b2c2e;
     height: 60vh;
     width: 75vw;
     max-width: 1500px;
@@ -66,7 +66,7 @@ p {
 }
 
 .introduction-text {
-  color: black;
+  color: white;
   flex: 0 1 auto; /* Prevents excessive growth */
   margin: auto;
   padding: 5%;
@@ -97,15 +97,16 @@ p {
   padding: 20px;
   min-width: 200px;
   max-width: 200px;
-  border: 2px solid white; /* 2px thick, solid style, white color */
+  /* border: 2px solid white;  2px thick, solid style, white color */
+  background-color: #550e9b;
   border-radius: 15px;
 }
 
 .projects-container,
 .best-projects-container {
-    color: black;
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
 }
@@ -118,19 +119,21 @@ p {
 
 .projects {
     position: relative;
-    background-color: white;
+    background-color: #2b2c2e;
     height: 600px;
     width: 500px;
-    margin: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .projects-image {
-    height: 50%;
+    height: 350px;
     width: 100%;
     overflow: hidden;
+    display: block;
 }
 
 .projects img {
@@ -141,10 +144,12 @@ p {
 .projects-text {
   padding-inline: 5%;
   padding-bottom: 1%;
+  height: 400px;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
 }
 
 .projects-text * {
@@ -159,17 +164,18 @@ p {
 
 .work,
 .education{
-  color: black;
-  background: white;
+  color: white;
+  background: #2b2c2e;
   padding: 2%;
   margin:1%;
   width: 80%;
   border-radius: 25px;
+  max-width: 1500px;
   min-width: 1100px;
 }
 
 .contacts{
-  color: black;
+  color: white;
   margin-top: 5%;
   display: flex;
   flex-direction: row;
@@ -180,7 +186,8 @@ p {
 .contacts-Address,
 .contacts-Phone,
 .contacts-Email {
-  background-color: white;
+  background-color: #2b2c2e;
+  color: white;
   flex: 1 1 0;
   margin:1px;
   text-align: center;
