@@ -32,9 +32,10 @@ p {
 
 /* Style for the exit button */
 .exit-button {
-    position: fixed;
+    width: 99%;
+    text-align: right;
+    position: sticky;
     top: 0px;
-    right: 10px;
     background-color: transparent;
     border: none;
     color: violet;

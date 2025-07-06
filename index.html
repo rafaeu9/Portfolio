@@ -11,8 +11,8 @@
     <title>Home | Mario Fernandes</title>
 </head>
 <body>
-    <div class="content">
-        <div class="introduction">
+    <div id="content" class="content">
+        <div id="introduction" class="introduction">
             <div class="introduction-text">
                 <h1>Hello!!!</h1>
                 <p>My name is Mário Fernandes</p>
@@ -39,7 +39,16 @@
             <img src="images/profile_picture.jpg" alt="Profile picture">
             </div>
         </div>
-        <h1>Technical Skills</h1>
+        <!-- Fixed Menu -->
+        <nav class="fixed-menu">
+            <a href="#content" onclick="scrollWithOffset('content', 0); return false;">Introduction</a>
+            <a href="#skills" onclick="scrollWithOffset('skills', 100); return false;">Skills</a>
+            <a href="#best-projects" onclick="scrollWithOffset('best-projects', 100); return false;">Projects</a>
+            <a href="#work" onclick="scrollWithOffset('work', 100); return false;">Work</a>
+            <a href="#education" onclick="scrollWithOffset('work', 0); return false;">Education</a>
+            <a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">Download CV</a>
+        </nav>
+        <h1 id="skills">Technical Skills</h1>
         <div class="skills">
             <div class="skills-Technical ">
                 <!-- C -->
@@ -93,12 +102,12 @@
             </div>
         </div>
 
-    <h1>Best Projects</h1>
+    <h1 id="best-projects">Best Projects</h1>
     <div class="best-projects-container"></div>
-    <h1>Projects</h1>
+    <h1 id="projects">Projects</h1>
     <div class="projects-container"></div>
 
-    <div class="about-me" style="padding-block: 20px;">
+    <div id="about-me" class="about-me" style="padding-block: 20px;">
         <h1>About Me.</h1>
         <p>
             My interest is in the creation of tools and helping my fellow teammates improve create new
@@ -117,7 +126,7 @@
         </a>
     </div>
 
-    <div class="work">
+    <div id="work" class="work">
         <h1>Work</h1>
         <p><b>Bridgeworks Ltd</b></p>
         <p>Graduate Software Engineer | Dec 2022 - Current</p>
@@ -135,7 +144,7 @@
         and delivery of software iterations.
         </p>
     </div>
-    <div class="education">
+    <div id="education" class="education">
         <h1>Education</h1>
         <p><b>Solent University</b></p>
         <p>BSc (Hons) Computer Games (Software Development) | 2018-2021</p>

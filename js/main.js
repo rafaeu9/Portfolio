@@ -46,6 +46,7 @@ function createContainer(file){
         container = document.createElement("div");
 
     veil.id = "veil";
+    veil.onclick = function() {exitConainer()};
     $(body).append(veil);
 
     veil.style.display = 'block'; // Show the veil
@@ -77,3 +78,10 @@ function exitConainer() {
 function scrollGallery(amount) {
     document.getElementById('container').shadowRoot.getElementById('imageGallery').scrollBy({ left: amount, behavior: 'smooth' });
 }
+
+function scrollWithOffset(id, offset) {
+    const element = document.getElementById(id);
+    const yOffset = -offset; // move 50px above the element
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
