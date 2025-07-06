@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="css/buttons.css">
     <script src="external/jquery-3.7.1.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 
     <title>Home | Mario Fernandes</title>
 </head>
 <body>
-    <div class="content">
-        <div class="introduction">
+    <div id="content" class="content">
+        <div id="introduction" class="introduction">
             <div class="introduction-text">
                 <h1>Hello!!!</h1>
                 <p>My name is Mário Fernandes</p>
@@ -29,7 +30,6 @@
                     <div class="footer-social-icons">
                         <ul class="social-icons">
                             <li><a href="https://github.com/rafaeu9" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a></li>
-                            <li><a href="https://x.com/rafeu9" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://linkedin.com/in/mariorcfernandes" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
@@ -39,26 +39,20 @@
             <img src="images/profile_picture.jpg" alt="Profile picture">
             </div>
         </div>
-        <div class="skills">
-            <div class="skills-Technical ">
-                <h1>Technical Skills</h1>
-                <p>Unity3D, C#, C++, DirectX, PlayStation 4 SDK, SDL, GitHub, Wwise</p>
-            </div>
-            <div class="skills-Education">
-            <h1>Education</h1>
-            <p>BSc (Hons), Computer Games (Software Development) 2018/2021</p>
-        </div>
-        <div class="skills-Hobies">
-            <h1>Hobies</h1>
-            <p>Music, Games, Anime, Coffee</p>
-        </div>
-    </div>
-    <h1>Best Projects</h1>
-    <div class="best-projects-container"></div>
-    <h1>Projects</h1>
-    <div class="projects-container"></div>
+        <!-- Fixed Menu -->
+        <nav class="fixed-menu">
+            <a href="#content" onclick="scrollWithOffset('content', 0); return false;">Introduction</a>
+            <a href="#about-me" onclick="scrollWithOffset('about-me', 50); return false;">About-me</a>
+			<a href="#skills" onclick="scrollWithOffset('skills', 75); return false;">Skills</a>
+            <a href="#work" onclick="scrollWithOffset('work', 75); return false;">Work</a>
+            <a href="#education" onclick="scrollWithOffset('education', 75); return false;">Education</a>
+			<a href="#best-projects" onclick="scrollWithOffset('best-projects', 75); return false;">Projects</a>
+            <a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">
+                        <button type="button" class="button-cv">Download CV</button>
+            </a>
+        </nav>
 
-    <div class="about-me" style="padding-block: 20px;">
+	<div id="about-me" class="about-me" style="padding-block: 20px;">
         <h1>About Me.</h1>
         <p>
             My interest is in the creation of tools and helping my fellow teammates improve create new
@@ -72,12 +66,63 @@
             I’m interested in it. Then, I try to create something using both what I have learned and my previous knowledge,
             to hopefully create something that works and maybe I can use in the future in other projects.
         </p>
-        <a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">
-            <button type="button" class="button-cv">Download CV</button>
-        </a>
     </div>
 
-    <div class="work">
+        <h1 id="skills">Technical Skills</h1>
+        <div class="skills">
+            <div class="skills-Technical ">
+                <!-- C -->
+                <iconify-icon icon="simple-icons:c" width="64"></iconify-icon>
+                <p>Language: C</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- C++ -->
+                <iconify-icon icon="simple-icons:cplusplus" width="64"></iconify-icon>
+                <p>Language: C++</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- Bash -->
+                <iconify-icon icon="simple-icons:gnubash" width="64"></iconify-icon>
+                <p>Language: Bash</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- Bash -->
+                <iconify-icon icon="simple-icons:html5" width="64"></iconify-icon>
+                <p>Language: HTML</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- Bash -->
+                <iconify-icon icon="simple-icons:css" width="64"></iconify-icon>
+                <p>Language: CSS</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- Unity -->
+                <iconify-icon icon="simple-icons:unity" width="64"></iconify-icon>
+                <p>Unity3D</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- Git -->
+                <iconify-icon icon="simple-icons:git" width="64"></iconify-icon>
+                <p>Hit</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- Docker -->
+                <iconify-icon icon="simple-icons:docker" width="64"></iconify-icon>
+                <p>Docker</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- wireshark -->
+                <iconify-icon icon="simple-icons:wireshark" width="64"></iconify-icon>
+                <p>Wireshark</p>
+            </div>
+            <div class="skills-Technical ">
+                <!-- linux -->
+                <iconify-icon icon="simple-icons:linux" width="64"></iconify-icon>
+                <p>Linux</p>
+            </div>
+        </div>
+
+    <div id="work" class="work">
         <h1>Work</h1>
         <p><b>Bridgeworks Ltd</b></p>
         <p>Graduate Software Engineer | Dec 2022 - Current</p>
@@ -95,7 +140,7 @@
         and delivery of software iterations.
         </p>
     </div>
-    <div class="education">
+    <div id="education" class="education">
         <h1>Education</h1>
         <p><b>Solent University</b></p>
         <p>BSc (Hons) Computer Games (Software Development) | 2018-2021</p>
@@ -122,6 +167,12 @@
         robots, Raspberry Pi’s and Arduinos using C++ and Processing.
         </p>
     </div>
+
+    <h1 id="best-projects">Best Projects</h1>
+    <div class="best-projects-container"></div>
+    <h1 id="projects">Projects</h1>
+    <div class="projects-container"></div>
+
     <div class="contacts">
         <div class="contacts-Address">
             <h1> Address </h1>
