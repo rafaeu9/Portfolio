@@ -42,12 +42,32 @@
         <!-- Fixed Menu -->
         <nav class="fixed-menu">
             <a href="#content" onclick="scrollWithOffset('content', 0); return false;">Introduction</a>
-            <a href="#skills" onclick="scrollWithOffset('skills', 100); return false;">Skills</a>
-            <a href="#best-projects" onclick="scrollWithOffset('best-projects', 100); return false;">Projects</a>
-            <a href="#work" onclick="scrollWithOffset('work', 100); return false;">Work</a>
-            <a href="#education" onclick="scrollWithOffset('work', 0); return false;">Education</a>
-            <a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">Download CV</a>
+            <a href="#about-me" onclick="scrollWithOffset('about-me', 50); return false;">About-me</a>
+			<a href="#skills" onclick="scrollWithOffset('skills', 75); return false;">Skills</a>
+            <a href="#work" onclick="scrollWithOffset('work', 75); return false;">Work</a>
+            <a href="#education" onclick="scrollWithOffset('education', 75); return false;">Education</a>
+			<a href="#best-projects" onclick="scrollWithOffset('best-projects', 75); return false;">Projects</a>
+            <a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">
+                        <button type="button" class="button-cv">Download CV</button>
+            </a>
         </nav>
+
+	<div id="about-me" class="about-me" style="padding-block: 20px;">
+        <h1>About Me.</h1>
+        <p>
+            My interest is in the creation of tools and helping my fellow teammates improve create new
+            things and improve their workflow with it. For example, in one of my projects in my portfolio,
+            that being my final project at the university, I created a tool for Unity aimed at artists or
+            designers that would help them create crowds of characters. In it, they could implement their
+            code or assets in a simple way that would speed up their scene-dressing job. <br>
+            Most of my personal projects always come from interest or curiosity, and it is by creating and
+            exploring that I grow and develop my coding abilities expanding my areas of knowledge and being more
+            versatile for tool creation. I always research the area of interest and try to understand what
+            I’m interested in it. Then, I try to create something using both what I have learned and my previous knowledge,
+            to hopefully create something that works and maybe I can use in the future in other projects.
+        </p>
+    </div>
+
         <h1 id="skills">Technical Skills</h1>
         <div class="skills">
             <div class="skills-Technical ">
@@ -102,30 +122,6 @@
             </div>
         </div>
 
-    <h1 id="best-projects">Best Projects</h1>
-    <div class="best-projects-container"></div>
-    <h1 id="projects">Projects</h1>
-    <div class="projects-container"></div>
-
-    <div id="about-me" class="about-me" style="padding-block: 20px;">
-        <h1>About Me.</h1>
-        <p>
-            My interest is in the creation of tools and helping my fellow teammates improve create new
-            things and improve their workflow with it. For example, in one of my projects in my portfolio,
-            that being my final project at the university, I created a tool for Unity aimed at artists or
-            designers that would help them create crowds of characters. In it, they could implement their
-            code or assets in a simple way that would speed up their scene-dressing job. <br>
-            Most of my personal projects always come from interest or curiosity, and it is by creating and
-            exploring that I grow and develop my coding abilities expanding my areas of knowledge and being more
-            versatile for tool creation. I always research the area of interest and try to understand what
-            I’m interested in it. Then, I try to create something using both what I have learned and my previous knowledge,
-            to hopefully create something that works and maybe I can use in the future in other projects.
-        </p>
-        <a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">
-            <button type="button" class="button-cv">Download CV</button>
-        </a>
-    </div>
-
     <div id="work" class="work">
         <h1>Work</h1>
         <p><b>Bridgeworks Ltd</b></p>
@@ -171,6 +167,12 @@
         robots, Raspberry Pi’s and Arduinos using C++ and Processing.
         </p>
     </div>
+
+    <h1 id="best-projects">Best Projects</h1>
+    <div class="best-projects-container"></div>
+    <h1 id="projects">Projects</h1>
+    <div class="projects-container"></div>
+
     <div class="contacts">
         <div class="contacts-Address">
             <h1> Address </h1>

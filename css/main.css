@@ -30,6 +30,8 @@ p {
   top: 0; /* Sticks when it hits the top */
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
   top: 0px;
   left: 0px;
@@ -40,7 +42,6 @@ p {
 
 .fixed-menu a {
   display: block;
-  margin-bottom: 10px;
   color: #333;
   text-decoration: none;
   padding-inline: 10px;
