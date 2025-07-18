@@ -1,198 +1,198 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 .introduction-buttons {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .footer-social-icons {
-    width: 75%;
-    display:block;
-    margin: 0 auto;
-    position: relative;
-    text-align: right;
+	width: 75%;
+	display:block;
+	margin: 0 auto;
+	position: relative;
+	text-align: right;
 }
 
 ul.social-icons {
-    float: none;
-    position: absolute;
-    right: 0;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	float: none;
+	position: absolute;
+	right: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .social-icons li {
-    vertical-align: top;
-    display: inline;
+	vertical-align: top;
+	display: inline;
 }
 
 .social-icons a {
-    color: #fff;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 .fa-linkedin,
 .fa-github{
-    padding:15px 20px;
-    margin-inline: 2px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    background-color: #550e9b;
+	padding:15px 20px;
+	margin-inline: 2px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+	background-color: #550e9b;
 }
 
 .fa-linkedin:hover {
-    background-color: #0073a4;
+	background-color: #0073a4;
 }
 
 .fa-github:hover {
-    background-color: #000000;
+	background-color: #000000;
 }
 
 .button-cv {
-    width: auto;
-    background-color: #550e9b; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+	width: auto;
+	background-color: #550e9b; /* Green */
+	border: none;
+	color: white;
+	padding: 10px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
 	border-radius: 999px;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    cursor: pointer;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+	cursor: pointer;
 }
 
 .button-cv:hover {
-    background-color: #b434eb;
+	background-color: #b434eb;
 }
 
 .button-basic {
-    width: auto;
-    background-color: #550e9b; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition: .5s;
-    cursor: pointer;
+	width: auto;
+	background-color: #550e9b; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+	cursor: pointer;
 }
 
 .button-basic:hover {
-    background-color: #b434eb;
+	background-color: #b434eb;
 }
 
 
 /* CSS */
 .button-49,
 .button-49:after {
-  width: 150px;
-  height: 76px;
-  line-height: 78px;
-  font-size: 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
-  border: 0;
-  color: #fff;
-  letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00E6F6;
-  outline: transparent;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+	width: 150px;
+	height: 76px;
+	line-height: 78px;
+	font-size: 20px;
+	font-family: 'Bebas Neue', sans-serif;
+	background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+	border: 0;
+	color: #fff;
+	letter-spacing: 3px;
+	box-shadow: 6px 0px 0px #00E6F6;
+	outline: transparent;
+	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
 }
 
 .button-49:after {
-  --slice-0: inset(50% 50% 50% 50%);
-  --slice-1: inset(80% -6px 0 0);
-  --slice-2: inset(50% -6px 30% 0);
-  --slice-3: inset(10% -6px 85% 0);
-  --slice-4: inset(40% -6px 43% 0);
-  --slice-5: inset(80% -6px 5% 0);
+	--slice-0: inset(50% 50% 50% 50%);
+	--slice-1: inset(80% -6px 0 0);
+	--slice-2: inset(50% -6px 30% 0);
+	--slice-3: inset(10% -6px 85% 0);
+	--slice-4: inset(40% -6px 43% 0);
+	--slice-5: inset(80% -6px 5% 0);
 
-  content: 'ALTERNATE TEXT';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
-  clip-path: var(--slice-0);
+	content: 'ALTERNATE TEXT';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+	text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+	clip-path: var(--slice-0);
 }
 
 .button-49:hover:after {
-  animation: 1s glitch;
-  animation-timing-function: steps(2, end);
+	animation: 1s glitch;
+	animation-timing-function: steps(2, end);
 }
 
 @keyframes glitch {
   0% {
-    clip-path: var(--slice-1);
-    transform: translate(-20px, -10px);
+	clip-path: var(--slice-1);
+	transform: translate(-20px, -10px);
   }
   10% {
-    clip-path: var(--slice-3);
-    transform: translate(10px, 10px);
+	clip-path: var(--slice-3);
+	transform: translate(10px, 10px);
   }
   20% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 10px);
+	clip-path: var(--slice-1);
+	transform: translate(-10px, 10px);
   }
   30% {
-    clip-path: var(--slice-3);
-    transform: translate(0px, 5px);
+	clip-path: var(--slice-3);
+	transform: translate(0px, 5px);
   }
   40% {
-    clip-path: var(--slice-2);
-    transform: translate(-5px, 0px);
+	clip-path: var(--slice-2);
+	transform: translate(-5px, 0px);
   }
   50% {
-    clip-path: var(--slice-3);
-    transform: translate(5px, 0px);
+	clip-path: var(--slice-3);
+	transform: translate(5px, 0px);
   }
   60% {
-    clip-path: var(--slice-4);
-    transform: translate(5px, 10px);
+	clip-path: var(--slice-4);
+	transform: translate(5px, 10px);
   }
   70% {
-    clip-path: var(--slice-2);
-    transform: translate(-10px, 10px);
+	clip-path: var(--slice-2);
+	transform: translate(-10px, 10px);
   }
   80% {
-    clip-path: var(--slice-5);
-    transform: translate(20px, -10px);
+	clip-path: var(--slice-5);
+	transform: translate(20px, -10px);
   }
   90% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 0px);
+	clip-path: var(--slice-1);
+	transform: translate(-10px, 0px);
   }
   100% {
-    clip-path: var(--slice-1);
-    transform: translate(0);
+	clip-path: var(--slice-1);
+	transform: translate(0);
   }
 }
 
 @media (min-width: 768px) {
   .button-49,
   .button-49:after {
-    width: 200px;
-    height: 86px;
-    line-height: 88px;
+	width: 200px;
+	height: 86px;
+	line-height: 88px;
   }
 }
