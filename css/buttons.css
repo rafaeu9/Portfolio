@@ -42,6 +42,7 @@ ul.social-icons {
 	-webkit-transition:.5s;
 	transition: .5s;
 	background-color: #550e9b;
+	color: white;
 }
 
 .fa-linkedin:hover {
@@ -68,6 +69,7 @@ ul.social-icons {
 	-webkit-transition:.5s;
 	transition: .5s;
 	cursor: pointer;
+	font-size: 1rem;
 }
 
 .button-cv:hover {
@@ -89,6 +91,7 @@ ul.social-icons {
 	-webkit-transition:.5s;
 	transition: .5s;
 	cursor: pointer;
+	font-size: 1rem;
 }
 
 .button-basic:hover {

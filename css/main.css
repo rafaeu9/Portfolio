@@ -1,12 +1,17 @@
+:root {
+  --text-color: #331C52;
+}
+
 body {
   /* background-image:/ url("../images/backgorund.png"); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #101113 ;
-  color: white;
+  background-color: #E1EBED ;
+  color: var(--text-color);
   font-family: Verdana, sans-serif;
   scroll-behavior: smooth; /* Smooth scroll on click */
   overflow-x: hidden;
+  margin: 0;
 }
 
 h1 {
@@ -21,7 +26,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: 0 auto;  /* Centers it horizontally */
+	margin: 0;  /* Centers it horizontally */
 	width: 100%;  /* Ensures it doesn’t shrink too much */
 }
 
@@ -30,7 +35,7 @@ p {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: white; /* Ensure it stays visible on scroll */
+	background-color: #8121D0; /* Ensure it stays visible on scroll */
 	z-index: 1000; /* Make sure it's above other content */
 	padding: 10px 20px; /* Optional styling for spacing */
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional styling for shadow */
@@ -41,7 +46,7 @@ p {
 
 .fixed-menu a {
 	display: block;
-	color: rgb(0, 0, 0);
+	color: white;
 	text-decoration: none;
 	padding-inline: 10px;
 	font-weight: bold;
@@ -49,13 +54,22 @@ p {
 }
 
 .fixed-menu a:hover {
-	color: #8340c5; /* Blue on hover */
+	color: var(--text-color); /* Blue on hover */
+}
+.introduction-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;  /* Centers it horizontally */
+	width: 100vw;  /* Ensures it doesn’t shrink too much */
+	background-color: #331C52;
 }
 
 .introduction {
 	display: flex;
 	flex-direction: row;
-	background-color: #2b2c2e;
+	background-color: #E1EBED;
 	height: 60vh;
 	width: 75vw;
 	max-width: 1500px;
@@ -65,7 +79,7 @@ p {
 }
 
 .introduction-text {
-	color: white;
+	color: var(--text-color);
 	flex: 0 1 auto; /* Prevents excessive growth */
 	margin: auto;
 	padding: 5%;
@@ -75,6 +89,17 @@ p {
 	width: auto; /* Set desired width for the image */
 	height: 100%; /* Maintain aspect ratio */
 	object-fit: contain;
+}
+
+.skills-box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;  /* Centers it horizontally */
+	width: 100vw;  /* Ensures it doesn’t shrink too much */
+	background-color: #DCCFED;
+	padding-block: 25px;
 }
 
 .skills {
@@ -97,7 +122,7 @@ p {
 	min-width: 200px;
 	max-width: 200px;
 	/* border: 2px solid white;  2px thick, solid style, white color */
-	background-color: #550e9b;
+	background-color: var(--text-color);
 	border-radius: 15px;
 }
 
@@ -108,6 +133,7 @@ p {
 	gap: 3rem;
 	justify-content: center;
 	align-items: center;
+	max-width: 2000px;
 }
 
 .projects-container button,
@@ -118,7 +144,7 @@ p {
 
 .projects {
 	position: relative;
-	background-color: #2b2c2e;
+	background-color: #DCCFED;
 	height: 600px;
 	width: 500px;
 	display: flex;
@@ -144,7 +170,7 @@ p {
 	padding-inline: 5%;
 	padding-bottom: 1%;
 	height: 400px;
-	color: white;
+	color: var(--text-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -157,14 +183,14 @@ p {
 }
 
 .about-me{
-	color: white;
+	color: var(--text-color);
 	max-width: 1000px;
 }
 
 .work,
 .education{
-	color: white;
-	background: #2b2c2e;
+	color: var(--text-color);
+	background: #DCCFED;
 	padding: 2%;
 	margin:1%;
 	width: 80%;
@@ -174,26 +200,25 @@ p {
 }
 
 .contacts{
+	background: #291C3A;
 	color: white;
-	margin-top: 5%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	height: 200px;
-	width: 100%;
+	width: 100vw;
+	margin-top: 100px;
 }
 
-.contacts-Address,
-.contacts-Phone,
-.contacts-Email {
-	background-color: #2b2c2e;
+.contacts-socials{
 	color: white;
-	flex: 1 1 0;
-	margin:1px;
-	text-align: center;
-	display: flex; /* Makes the individual box a flex container */
-	flex-direction: column;
-	align-items: center; /* Centers text vertically inside each box */
-	justify-content: center; /* Ensures horizontal centering for the text */
+	width: 75%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 }
 
 /* Style for the veil */
