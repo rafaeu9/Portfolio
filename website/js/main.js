@@ -5,12 +5,12 @@ function getFolders(path, container) {
         dataType: 'json', // Expecting a JSON response
         success: function(directories) {
             directories.forEach(function(dir) {
-                loadContent(path + '/' + dir, container); // Call the loadContent function for each directory
-            });
+                loadContent('/' + path + '/' + dir, container); // Call the loadContent function for each directory
+			});
         },
         error: function(error) {
-            console.error('Error fetching project folders:', error);
-            alert("Error fetching project folders.");
+            //console.error('Error fetching project folders:', error);
+            //alert("Error fetching project folders.");
         }
     });
 }
@@ -30,8 +30,8 @@ function loadContent(path, container) {
 }
 
 $(document).ready(function() {
-    getFolders('/best-projects', ".best-projects-container");
-    getFolders('/projects', ".projects-container");
+    getFolders('list/best-projects', ".best-projects-container");
+    getFolders('list/projects', ".projects-container");
 });
 
 $.fn.shadow = function() {
