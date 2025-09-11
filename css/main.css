@@ -1,12 +1,12 @@
 :root {
-	--text-color: #DADED8;
-	--h1-text-color: #768064;
-	--website-background-color: #b56449;
-	--background-color: #2C3424;
-	--box-color: #768064;
-	--top-menu: #4C583E;
-	--button-color: #4C583E;
-	--button-hover-color: #768064;
+	--text-color: #fff;
+	--h1-text-color: #FFBA00;
+	--website-background-color: #eee2d2;
+	--background-color: #6D9773;
+	--box-color: #0C3B2E;
+	--top-menu: #0C3B2E;
+	--button-color: #BB8A52;
+	--button-hover-color: #FFBA00;
 }
 
 body {
@@ -22,12 +22,12 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  /* color: var(--h1-text-color); */
+  font-size: 220%;
+  color: var(--h1-text-color);
 }
 
 p {
-  font-size: 120%;
+  font-size: 130%;
 }
 
 .content {
@@ -82,6 +82,7 @@ p {
 	margin: 0%;  /* Centers it horizontally */
 	width: 98vw;
 	height: 75vh;
+	margin-top: 50px;
 }
 
 .introduction-text {
@@ -91,8 +92,9 @@ p {
 	justify-content: center;
 	align-items: center;
 	margin: 0%;
-	width: 500px;
+	width: 600px;
 	min-width: 300px;
+	font-size: 150%;
 }
 
 .introduction-image{
@@ -114,7 +116,7 @@ p {
 	justify-content: center;
 	align-items: flex-end;
 	gap: 20px;
-	width: 500px;
+	width: 600px;
 }
 
 .hero-stats {
@@ -134,7 +136,7 @@ p {
 	line-height: 1.4;
 	margin: 0 0 .25rem 0;
 }
-  .hero-stats .tagline span { color: var(--button-color); }
+  .hero-stats .tagline span { color: var(--h1-text-color); }
 
 .stats-grid {
 	list-style: none;
@@ -183,7 +185,7 @@ p {
 	flex-wrap: wrap;
 	justify-content: center;
 	text-align: center;
-	color: white;
+	color: var(--text-color);
 	gap: 10px;
 	width: 100vw;
 	margin-block: 20px;
@@ -202,7 +204,7 @@ p {
 	/* border: 2px solid white;  2px thick, solid style, white color */
 	background-color: var(--background-color);
 	border-radius: 15px;
-	font-size: 0.75rem;
+	font-size: 100%;
 	margin-block: 2%;
 }
 
@@ -234,13 +236,16 @@ p {
 	align-items: center;
 	border-radius: 25px;
 	overflow: hidden;
+	border: 10px solid var(--background-color);
+	box-shadow: 0 20px 30px rgba(0,0,0,0.5);
 }
 
 .projects-image {
-	height: 350px;
+	height: 300px;
 	width: 100%;
 	overflow: hidden;
 	display: block;
+	border-radius: 25px;
 }
 
 .projects img {
@@ -291,7 +296,7 @@ p {
 
 .work,
 .education{
-	color: var(--background-color);
+	color: var(--text-color);
 	background-color: var(--box-color);
 	padding: 2%;
 	margin: 2%;
@@ -320,6 +325,7 @@ p {
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+	margin: 0%;
 }
 
 /* Style for the veil */
@@ -343,22 +349,18 @@ p {
 		flex-direction: column;
 	}
 
-	.introduction {
+	/* .introduction {
 		height: 60vh;
-	}
+	} */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 	.introduction-buttons{
 		display: none;
 	}
 
 	.introduction-image{
 		height: 80%;
-	}
-
-	.introduction-box {
-		height: 80vh;
 	}
 
 	.work,
@@ -371,6 +373,15 @@ p {
 		font-size: 1.2rem;
 		gap: 0.7rem;
 	}
+
+	h1 {
+	  font-size: 200%;
+	  color: var(--h1-text-color);
+	}
+
+	p {
+	  font-size: 110%;
+	}
 }
 
 @media (max-width: 800px) {
@@ -378,9 +389,22 @@ p {
 		display: none;
 	}
 
+	.introduction-box {
+		height: 80vh;
+	}
+
 	.fixed-menu {
 		font-size: 0.80rem;
 		gap: 0.1rem;
+	}
+
+	h1 {
+	  font-size: 190%;
+	  color: var(--h1-text-color);
+	}
+
+	p {
+	  font-size: 100%;
 	}
 
 
