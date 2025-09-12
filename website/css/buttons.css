@@ -100,3 +100,9 @@ ul.social-icons {
 .button-basic:hover {
 	background-color: var(--button-hover-color);
 }
+
+@media (pointer: coarse)  {
+	p {
+	  font-size: 200%;
+	}
+}

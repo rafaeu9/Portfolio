@@ -11,7 +11,7 @@ RUN npm install
 
 # Copy your server and website files
 COPY server.js ./
-COPY website ./public
+COPY website ./website
 
 # Expose port 8080
 EXPOSE 8080
