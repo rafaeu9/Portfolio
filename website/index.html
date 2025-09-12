@@ -1,0 +1,230 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<script src="external/jquery-3.7.1.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+	<title>Home | Mario Fernandes</title>
+</head>
+<body>
+	<!-- Fixed Menu -->
+	<nav class="fixed-menu">
+		<a href="#content" onclick="scrollWithOffset('content', 0); return false;">Introduction</a>
+		<a href="#about-me" onclick="scrollWithOffset('about-me', 50); return false;">About-me</a>
+		<a href="#skills" onclick="scrollWithOffset('skills', 75); return false;">Skills</a>
+		<a href="#work" onclick="scrollWithOffset('work', 75); return false;">Work</a>
+		<a href="#education" onclick="scrollWithOffset('education', 75); return false;">Education</a>
+		<a href="#best-projects" onclick="scrollWithOffset('best-projects', 75); return false;">Projects</a>
+		<div>
+			<a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">
+						<button type="button" class="button-cv">Download CV</button>
+			</a>
+		</div>
+	</nav>
+	<div id="content" class="content">
+		<div class="introduction-box">
+			<div class="introduction">
+				<div class="introduction-text">
+					<div>
+						<div class="introduction-text-text">
+							<h2>Mário Fernandes</h2>
+							<h1>Software Engineer</h1>
+						</div>
+						<a href="files/Mario-Fernandes-CV.pdf" download style="text-decoration: none;">
+							<button type="button" class="button-cv">Download CV</button>
+						</a>
+					</div>
+				</div>
+				<div class="introduction-image">
+					<img src="images/profile_picture.jpg" alt="Profile picture">
+				</div>
+				<!-- <div class="introduction-buttons">
+					<a href="https://github.com/rafaeu9" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a>
+					<a href="https://linkedin.com/in/mariorcfernandes" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a>
+				</div> -->
+				<div class="introduction-buttons">
+					<div class="hero-stats">
+						<p class="tagline">
+							Turning complex problems into <span>reliable, fast</span> software.
+						</p>
+						<ul class="stats-grid">
+							<li class="stat">
+								<span class="num" data-count="3">3+</span>
+								<span class="label">Years Experience</span>
+							</li>
+							<li class="stat">
+								<span class="num" data-count="15">15+</span>
+								<span class="label">Features Shipped</span>
+							</li>
+							<li class="stat">
+								<span class="num" data-count="40">40%</span>
+								<span class="label">Faster Load Times</span>
+							</li>
+							<li class="stat">
+								<span class="num" data-count="99.9">99.9%</span>
+								<span class="label">Uptime Contributions</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="skills-box">
+				<!-- <h1 id="skills">Technical Skills</h1> -->
+				<div class="skills">
+					<div class="skills-Technical">
+						<!-- C -->
+						<iconify-icon icon="simple-icons:c" width="48"></iconify-icon>
+						<p>C</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- C++ -->
+						<iconify-icon icon="simple-icons:cplusplus" width="48"></iconify-icon>
+						<p>C++</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Bash -->
+						<iconify-icon icon="simple-icons:gnubash" width="48"></iconify-icon>
+						<p>Bash</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Bash -->
+						<iconify-icon icon="simple-icons:html5" width="48"></iconify-icon>
+						<p>HTML</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Bash -->
+						<iconify-icon icon="simple-icons:css" width="48"></iconify-icon>
+						<p>CSS</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Unity -->
+						<iconify-icon icon="simple-icons:unity" width="48"></iconify-icon>
+						<p>Unity3D</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Git -->
+						<iconify-icon icon="simple-icons:git" width="48"></iconify-icon>
+						<p>Git</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Docker -->
+						<iconify-icon icon="simple-icons:docker" width="48"></iconify-icon>
+						<p>Docker</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- wireshark -->
+						<iconify-icon icon="simple-icons:wireshark" width="48"></iconify-icon>
+						<p>Wireshark</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- linux -->
+						<iconify-icon icon="simple-icons:linux" width="48"></iconify-icon>
+						<p>Linux</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-me-box">
+		<div id="about-me" class="about-me" style="padding-block: 20px;">
+			<h1>About Me.</h1>
+			<p>
+				My interest is in the creation of tools and helping my fellow teammates improve create new
+				things and improve their workflow with it. For example, in one of my projects in my portfolio,
+				that being my final project at the university, I created a tool for Unity aimed at artists or
+				designers that would help them create crowds of characters. In it, they could implement their
+				code or assets in a simple way that would speed up their scene-dressing job. <br>
+				Most of my personal projects always come from interest or curiosity, and it is by creating and
+				exploring that I grow and develop my coding abilities expanding my areas of knowledge and being more
+				versatile for tool creation. I always research the area of interest and try to understand what
+				I’m interested in it. Then, I try to create something using both what I have learned and my previous knowledge,
+				to hopefully create something that works and maybe I can use in the future in other projects.
+			</p>
+		</div>
+	</div>
+	<h1 id="best-projects" style="margin-block: 50px;">Best Projects</h1>
+	<div class="best-projects-container"></div>
+	<div class="work-box">
+		<div id="work" class="work">
+			<h1>Work</h1>
+			<h2>Bridgeworks Ltd</h2>
+			<h3>Graduate Software Engineer | Dec 2022 - Current</h3>
+			<p>
+			• Collaborated on the maintenance of web applications using JavaScript, Lua,
+			HTML, and CSS.<br/>
+			• Worked with the product team to port our products to Docker containers.<br/>
+			• Developed and tested code in C, Bash, and other relevant programming
+			languages.<br/>
+			• Actively participated in code reviews, addressing feedback to improve
+			coding skills.<br/>
+			• Diagnosed and resolved software issues, contributing to efficient
+			problem-solving.<br/>
+			• Functioned as a valuable member of an Agile team, aiding in the planning
+			and delivery of software iterations.
+			</p>
+		</div>
+	</div>
+	<div class="education-box">
+		<div id="education" class="education">
+			<h1>Education</h1>
+			<h2>Solent University</h2>
+			<h2>BSc (Hons) Computer Games (Software Development) | 2018-2021</h2>
+			<h3>Grade: First Class of Honour</h3>
+			<p>
+			At Solent University I learnt skills relevant to software development from
+			the ground up, with a heavy focus on C++ and C#. Throughout these years I
+			have created many projects for assignments using various API's such as
+			DirectX11, SDL, PlayStation 4 SDK, Unity3D, Unreal and Wwise. I also
+			studied standard project management methodologies for software development
+			in several units and put these into practice for assignments.
+			</p>
+			<br>
+			<h2>Escola Secundaria de Caldas das Taipas</h2>
+			<h2>
+			Professional Course of Electronics, Automation, and Computers Technician |
+			2015-2018
+			</h2>
+			<h3>Grade: 18/20</h3>
+			<p>
+			In this course, I learned how to design, create and repair electronics.
+			From designing with Proteus to creating circuit boards, I learned to repair
+			computers and any type of electronics as well as learn how to automate
+			robots, Raspberry Pi’s and Arduinos using C++ and Processing.
+			</p>
+		</div>
+	</div>
+	<div class="achivments-box">
+		<div id="achivments" class="achivments">
+			<h1>Achievements</h1>
+			<h2>Bridgeworks Ltd &amp; OCF | Project Celer</h2>
+			<p>
+				Working alongside OCF, I helped accelerate IBM’s GPFS storage
+				performance. My team and I presented our optimisations at the
+				GPFS User Group at IBM, sharpening both our deep‑dive technical
+				skills and our ability to communicate complex ideas.
+			</p>
+			<h2>EdX - IBM Professional Certificate in Cloud and Application Development Foundations</h2>
+			<p>
+				During a 4-month period, I deepened my knowledge in web development.
+				This course gave me the fundamentals to work from front to back
+				end using basic technologies like HTML5, CSS and JavaScript,
+				to a bit more complex ones like React, Node.js and much more,
+				all in the context of developing cloud applications.
+			</p>
+		</div>
+	</div>
+	<h1 id="projects" style="margin-block: 50px;">Projects</h1>
+	<div class="projects-container"></div>
+	</div>
+	<div class="contacts">
+		<p>Designed and built by Mário Fernandes</p>
+		<div class="contacts-socials">
+			<a href="https://github.com/rafaeu9" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a>
+			<a href="https://linkedin.com/in/mariorcfernandes" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a>
+		</div>
+</div>
+</body>
+</html>
