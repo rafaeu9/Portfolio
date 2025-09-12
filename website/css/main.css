@@ -238,6 +238,10 @@ p {
 	overflow: hidden;
 	border: 10px solid var(--background-color);
 	box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+	h2 {
+		font-size: 200%;
+		color: var(--h1-text-color);
+	}
 }
 
 .projects-image {
