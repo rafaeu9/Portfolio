@@ -22,12 +22,44 @@ body {
 }
 
 h1 {
-  font-size: 300%;
+  font-size: 200%;
   color: var(--h1-text-color);
 }
 
+h2 {
+  font-size: 130%;
+  margin: 1rem 0 0.3rem;
+}
+
+h3 {
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0 0 1rem;
+}
+
+h3 span {
+  font-style: italic;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
 p {
-  font-size: 120%;
+  line-height: 1.6;
+}
+
+.section-title {
+  /*font-size: 1.8rem;*/
+  color: var(--h1-text-color);
+  border-bottom: 2px solid var(--h1-text-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .content {
@@ -288,6 +320,10 @@ p {
 	margin: 4%;
 }
 
+.work-box{
+	margin-top: 50px;
+}
+
 .work-box,
 .achivments-box{
 	display: flex;
@@ -307,6 +343,9 @@ p {
 .education,
 .achivments{
 	color: var(--text-color);
+	h1 {
+		color: var(--cards-h1-color);
+	}
 	background-color: var(--box-color);
 	padding: 2%;
 	margin: 2%;
