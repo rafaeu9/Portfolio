@@ -1,6 +1,6 @@
 :root {
 	--text-color: #fff;
-	--h1-text-color: #FFBA00;
+	--h1-text-color: #BB8A52;
 	--website-background-color: #eee2d2;
 	--background-color: #6D9773;
 	--box-color: #0C3B2E;
@@ -22,17 +22,17 @@ body {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 250%;
   color: var(--h1-text-color);
 }
 
 h2 {
-  font-size: 130%;
+  font-size: 150%;
   margin: 1rem 0 0.3rem;
 }
 
 h3 {
-  font-size: 100%;
+  font-size: 120%;
   font-weight: normal;
   margin: 0 0 1rem;
 }
@@ -51,7 +51,8 @@ ul li {
 }
 
 p {
-  line-height: 1.6;
+	font-size: 120%;
+	line-height: 1.6;
 }
 
 .section-title {
@@ -111,6 +112,7 @@ p {
 	justify-content: center;
 	position: relative;
 	align-items: top;
+	font-size: 120%;
 	margin: 0%;  /* Centers it horizontally */
 	width: 98vw;
 	height: 70vh;
@@ -200,7 +202,6 @@ p {
 
 .stat .label {
 	font-size: .95rem;
-	color: #b9c2cf;
 }
 
 
@@ -272,7 +273,7 @@ p {
 	box-shadow: 0 20px 30px rgba(0,0,0,0.5);
 	h2 {
 		font-size: 200%;
-		color: var(--h1-text-color);
+		color: var(--button-hover-color);
 	}
 }
 
@@ -316,8 +317,11 @@ p {
 
 .about-me{
 	color: var(--text-color);
-	max-width: 1000px;
+	max-width: 1500px;
 	margin: 4%;
+	h1 {
+		color: var(--button-hover-color);
+	}
 }
 
 .work-box{
@@ -349,7 +353,7 @@ p {
 	background-color: var(--box-color);
 	padding: 2%;
 	margin: 2%;
-	max-width: 1000px;
+	width: 1000px;
 	border-radius: 25px;
 	box-shadow: 0 20px 30px rgba(0,0,0,.50);
 }
