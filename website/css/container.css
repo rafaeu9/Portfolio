@@ -1,7 +1,7 @@
 /* Style for the overlay */
 .container {
 	position: fixed; /* Fixed position to stay on top of the page */
-	background-color: white; /* White background */
+	background-color: #f9f9f9;
 	color: black;
 	top: 50%;
 	left: 50%;
@@ -23,11 +23,34 @@
 	max-width: 1200px;
 	margin: 0 auto;  /* Centers it horizontally */
 	padding: 50px;
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    line-height: 1.7;
+	font-size: 120%;
+}
+
+h1 {
+  font-size: 250%;
+  color: #BB8A52;
 }
 
 /* Optional: Style for the content */
 p {
 	margin-bottom: 15px;
+	line-height: 1.6;
+}
+
+ul {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+b {
+	color: #b37b2a;
 }
 
 /* Style for the exit button */
@@ -38,7 +61,7 @@ p {
 	top: 0px;
 	background-color: rgba(0, 0, 0, 0);
 	border: none;
-	color: violet;
+	color: #0C3B2E;
 	font-size: 35px;
 	font-weight: bold;
 	cursor: pointer;
@@ -104,7 +127,7 @@ p {
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%); /* Center button vertically and horizontally */
-	background: rgba(85, 14, 155, 1); /* Button color */
+	background: #0C3B2E; /* Button color */
 	color: white;
 	border: none;
 	cursor: pointer;
