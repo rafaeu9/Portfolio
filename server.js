@@ -6,7 +6,6 @@ const app = express();
 app.use(express.static('website')); // Serve static files from 'public' folder
 
 app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
 });
 
@@ -20,7 +19,6 @@ app.use('/list', express.static(path.join(__dirname, 'website')));
 // Endpoint to list folders as JSON
 app.get('/list/:folder', (req, res) => {
     const folderPath = path.join(__dirname, 'website', req.params.folder);
-    console.log(`Listing folders in: ${folderPath}`);
 
     fs.readdir(folderPath, { withFileTypes: true }, (err, files) => {
         if (err) {
@@ -29,7 +27,6 @@ app.get('/list/:folder', (req, res) => {
         }
 
         const dirs = files.filter(f => f.isDirectory()).map(f => f.name);
-        console.log(`Found directories: ${dirs}`);
         res.json(dirs);
     });
 });
