@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     res.header("Access-Control-Allow-Origin", "*");
     next();
 });
