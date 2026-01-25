@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const geoip = require('geoip-lite');
 
-app.use(express.static('website, { index: false }')); // Serve static files from 'public' folder
+// app.use(express.static('website, { index: false }')); // Serve static files from 'public' folder
 
 // Only log connections for the main homepage
 app.get('/', (req, res) => {
@@ -22,6 +22,8 @@ app.get('/', (req, res) => {
     // Serve homepage
     res.sendFile(path.join(__dirname, 'website', 'index.html'));
 });
+
+app.use(express.static(path.join(__dirname, 'website')));
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
