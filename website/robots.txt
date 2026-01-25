@@ -1,0 +1,6 @@
+# Allow all web crawlers full access
+User-agent: *
+Disallow:
+
+# Sitemap location (optional, if you have one)
+# Sitemap: https://www.mariofernandes.co.uk/sitemap.xml
