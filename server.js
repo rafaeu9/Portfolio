@@ -10,8 +10,23 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
+    // Get IP address
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+
+    // Get user agent
+    const userAgent = req.headers['user-agent'];
+
+    // Log basic info
+    console.log(`[${new Date().toISOString()}] Connection from IP: ${ip}, URL: ${req.originalUrl}, User-Agent: ${userAgent}`);
+
     res.header("Access-Control-Allow-Origin", "*");
     next();
+});
+
+// Serve robots.txt explicitly
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.sendFile(path.join(__dirname, 'website', 'robots.txt'));
 });
 
 app.use('/list', express.static(path.join(__dirname, 'website')));
