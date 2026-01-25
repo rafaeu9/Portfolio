@@ -6,15 +6,21 @@ const geoip = require('geoip-lite');
 
 app.use(express.static('website')); // Serve static files from 'public' folder
 
-app.use((req, res, next) => {
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  const geo = geoip.lookup(ip);
-  console.log(`IP: ${ip}, Location: ${geo ? geo.country : 'Unknown'}`);
-  next();
-});
+// Only log connections for the main homepage
+app.get('/', (req, res) => {
+    // Get IP address
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
-app.use((req, res, next) => {
-    next();
+    // Lookup location
+    const geo = geoip.lookup(ip);
+
+    console.log(`[${new Date().toISOString()}] Connection to /`);
+    console.log(`IP: ${ip}`);
+    console.log(`Location: ${geo ? `${geo.city || 'Unknown'}, ${geo.country}` : 'Unknown'}`);
+    console.log(`User-Agent: ${req.headers['user-agent']}`);
+
+    // Serve homepage
+    res.sendFile(path.join(__dirname, 'website', 'index.html'));
 });
 
 app.use((req, res, next) => {
