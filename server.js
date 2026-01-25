@@ -35,6 +35,10 @@ app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname, 'website', 'robots.txt'));
 });
 
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, 'website', 'favicon.ico'));
+});
+
 app.use('/list', express.static(path.join(__dirname, 'website')));
 
 // Endpoint to list folders as JSON
