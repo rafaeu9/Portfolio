@@ -2,23 +2,22 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
+const geoip = require('geoip-lite');
 
 app.use(express.static('website')); // Serve static files from 'public' folder
+
+app.use((req, res, next) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const geo = geoip.lookup(ip);
+  console.log(`IP: ${ip}, Location: ${geo ? geo.country : 'Unknown'}`);
+  next();
+});
 
 app.use((req, res, next) => {
     next();
 });
 
 app.use((req, res, next) => {
-    // Get IP address
-    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-
-    // Get user agent
-    const userAgent = req.headers['user-agent'];
-
-    // Log basic info
-    console.log(`[${new Date().toISOString()}] Connection from IP: ${ip}, URL: ${req.originalUrl}, User-Agent: ${userAgent}`);
-
     res.header("Access-Control-Allow-Origin", "*");
     next();
 });
