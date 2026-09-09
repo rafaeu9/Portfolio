@@ -102,7 +102,11 @@ ul.social-icons {
 }
 
 @media (pointer: coarse)  {
-	p {
-	  font-size: 200%;
+	.button-cv{
+		font-size: 150%;
+	}
+
+	.button-basic{
+		font-size: 150%;
 	}
 }
