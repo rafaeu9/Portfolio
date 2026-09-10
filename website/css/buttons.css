@@ -101,6 +101,18 @@ ul.social-icons {
 	background-color: var(--button-hover-color);
 }
 
+[data-theme="dark"] .button-cv,
+[data-theme="dark"] .button-basic {
+	border: 1px solid var(--button-color);
+	color: #081923;
+}
+
+[data-theme="dark"] .button-cv:hover,
+[data-theme="dark"] .button-basic:hover {
+	border-color: var(--button-hover-color);
+	box-shadow: 0 10px 25px rgba(212, 175, 55, .2);
+}
+
 @media (pointer: coarse)  {
 	.button-cv{
 		font-size: 150%;

@@ -1,8 +1,8 @@
 /* Style for the overlay */
 .container {
 	position: fixed; /* Fixed position to stay on top of the page */
-	background-color: #f9f9f9;
-	color: black;
+	background-color: var(--overlay-background);
+	color: var(--overlay-text);
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%); /* Move back by half the width & height */
@@ -24,14 +24,14 @@
 	margin: 0 auto;  /* Centers it horizontally */
 	padding: 50px;
 	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    color: #333;
+    color: var(--overlay-text);
     line-height: 1.7;
 	font-size: 120%;
 }
 
 h1 {
   font-size: 250%;
-  color: #BB8A52;
+  color: var(--overlay-heading);
 }
 
 /* Optional: Style for the content */
@@ -55,24 +55,54 @@ b {
 
 /* Style for the exit button */
 .exit-button {
-	width: 99%;
+	display: block;
+	width: fit-content;
+	margin-left: auto;
 	text-align: right;
 	position: sticky;
 	top: 0px;
 	background-color: rgba(0, 0, 0, 0);
 	border: none;
 	color: #0C3B2E;
-	font-size: 35px;
-	font-weight: bold;
 	cursor: pointer;
-	padding: 5px 10px;
+	padding: 14px 18px;
 	border-radius: 50%;
 	transition: background-color 0.3s, color 0.3s;
 	z-index: 1000;    /* Ensure it stays above other elements */
 }
 
+.close-icon {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.close-icon::before,
+.close-icon::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 32px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: currentColor;
+	content: "";
+}
+
+.close-icon::before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-icon::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .exit-button:hover {
-	color: #ff0000; /* Change color to red on hover */
+	color: #ff0000;
+	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(196, 243, 107, .1);
 }
 
 .exit-button:focus {
@@ -127,7 +157,7 @@ b {
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%); /* Center button vertically and horizontally */
-	background: #0C3B2E; /* Button color */
+	background: var(--overlay-button); /* Button color */
 	color: white;
 	border: none;
 	cursor: pointer;

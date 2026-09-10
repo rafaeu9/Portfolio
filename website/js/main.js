@@ -85,3 +85,21 @@ function scrollWithOffset(id, offset) {
 	const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 	window.scrollTo({ top: y, behavior: 'smooth' });
   }
+
+function setTheme(isDark) {
+	const themeToggle = document.getElementById('theme-toggle');
+	const themeIcon = themeToggle.querySelector('.theme-toggle-icon');
+
+	document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+	themeToggle.setAttribute('aria-pressed', String(isDark));
+	themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+	themeIcon.textContent = isDark ? '☀' : '☾';
+}
+
+$(document).ready(function() {
+	const themeToggle = document.getElementById('theme-toggle');
+	setTheme(false);
+	themeToggle.addEventListener('click', function() {
+		setTheme(document.documentElement.dataset.theme !== 'dark');
+	});
+});
