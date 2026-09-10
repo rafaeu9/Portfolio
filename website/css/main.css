@@ -454,6 +454,7 @@ b {
 .work,
 .education,
 .achivments{
+	box-sizing: border-box;
 	color: var(--text-color);
 	h1 {
 		color: var(--cards-h1-color);
@@ -464,6 +465,243 @@ b {
 	width: 1000px;
 	border-radius: 25px;
 	box-shadow: 0 20px 30px rgba(0,0,0,.50);
+}
+
+.work {
+	max-width: 1120px;
+}
+
+.education,
+.achivments {
+	max-width: 1120px;
+	width: min(100% - 4%, 1120px);
+}
+
+.education-card,
+.achievement-card {
+	padding: 1.5rem;
+	border: 1px solid rgba(255, 255, 255, .12);
+	border-radius: 16px;
+	background: rgba(255, 255, 255, .045);
+}
+
+.education-card-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.card-kicker {
+	color: var(--button-hover-color);
+	font-size: .7rem;
+	font-weight: bold;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.education-card h2,
+.achievement-card h2 {
+	margin: .3rem 0 .15rem;
+	color: var(--text-color);
+	font-size: clamp(1.3rem, 2vw, 1.75rem);
+}
+
+.education-card h3,
+.achievement-card h3 {
+	margin: 0;
+	color: var(--h1-text-color);
+	font-size: 1rem;
+}
+
+.education-card h3 span {
+	color: var(--text-color);
+	font-style: normal;
+}
+
+.achievement-badge {
+	padding: .6rem .8rem;
+	border: 1px solid rgba(255, 186, 0, .4);
+	border-radius: 10px;
+	color: var(--button-hover-color);
+	font-size: .75rem;
+	font-weight: bold;
+	line-height: 1.25;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.card-meta {
+	margin-top: .9rem;
+	color: var(--button-hover-color);
+	font-size: .85rem;
+	font-weight: bold;
+}
+
+.card-meta span {
+	margin-inline: .35rem;
+	color: var(--h1-text-color);
+}
+
+.card-summary {
+	margin: 1rem 0 .75rem;
+	color: var(--text-color);
+	font-size: 1rem;
+}
+
+.education-card ul,
+.achievement-card ul {
+	font-size: 1rem;
+}
+
+.education-card li,
+.achievement-card li {
+	margin-bottom: .35rem;
+}
+
+.achievement-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	min-width: 0;
+}
+
+.achievement-card {
+	min-width: 0;
+	box-sizing: border-box;
+}
+
+[data-theme="dark"] .education-card,
+[data-theme="dark"] .achievement-card {
+	border-color: rgba(212, 175, 55, .2);
+	background: rgba(255, 255, 255, .04);
+}
+
+[data-theme="dark"] .achievement-card:first-child {
+	border-color: rgba(212, 175, 55, .45);
+}
+
+.work-timeline {
+	position: relative;
+	display: grid;
+	gap: 1.25rem;
+	margin-top: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+.work-timeline::before {
+	position: absolute;
+	top: .75rem;
+	bottom: .75rem;
+	left: .3rem;
+	width: 2px;
+	background: linear-gradient(var(--button-hover-color), rgba(187, 138, 82, .35));
+	content: "";
+}
+
+.work-entry {
+	position: relative;
+	padding: 1.35rem 1.5rem;
+	border: 1px solid rgba(255, 255, 255, .12);
+	border-radius: 16px;
+	background: rgba(255, 255, 255, .045);
+}
+
+.work-entry.current-role {
+	border-color: rgba(255, 186, 0, .5);
+	background: linear-gradient(135deg, rgba(187, 138, 82, .14), rgba(255, 255, 255, .035));
+}
+
+.work-marker {
+	position: absolute;
+	top: 1.45rem;
+	left: -1.82rem;
+	width: .72rem;
+	height: .72rem;
+	border: 3px solid var(--box-color);
+	border-radius: 50%;
+	background: var(--button-hover-color);
+	box-shadow: 0 0 0 4px rgba(255, 186, 0, .12);
+}
+
+.previous-role .work-marker {
+	background: var(--h1-text-color);
+	box-shadow: none;
+}
+
+.work-entry-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.work-entry h2 {
+	margin: .2rem 0 .15rem;
+	color: var(--text-color);
+	font-size: clamp(1.25rem, 2vw, 1.7rem);
+}
+
+.work-entry h3 {
+	margin: 0;
+	color: var(--h1-text-color);
+	font-size: 1rem;
+}
+
+.work-entry h3 span {
+	color: var(--text-color);
+	font-style: normal;
+}
+
+.work-entry time {
+	flex: 0 0 auto;
+	padding: .35rem .65rem;
+	border: 1px solid rgba(255, 186, 0, .35);
+	border-radius: 999px;
+	color: var(--button-hover-color);
+	font-size: .8rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.work-status {
+	color: var(--button-hover-color);
+	font-size: .7rem;
+	font-weight: bold;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.work-summary {
+	margin: 1rem 0 .75rem;
+	color: var(--text-color);
+	font-size: 1rem;
+}
+
+.work-entry ul {
+	font-size: 1rem;
+}
+
+.work-entry li {
+	margin-bottom: .35rem;
+}
+
+[data-theme="dark"] .work-entry {
+	border-color: rgba(212, 175, 55, .2);
+	background: rgba(255, 255, 255, .04);
+}
+
+[data-theme="dark"] .work-entry.current-role {
+	border-color: rgba(212, 175, 55, .5);
+	background: linear-gradient(135deg, rgba(212, 175, 55, .14), rgba(255, 255, 255, .035));
+}
+
+[data-theme="dark"] .work-timeline::before {
+	background: linear-gradient(var(--button-hover-color), rgba(212, 175, 55, .3));
+}
+
+[data-theme="dark"] .work-marker {
+	border-color: var(--box-color);
 }
 
 .contacts{
@@ -535,6 +773,16 @@ b {
 		width: 100vw;
 	}
 
+	.education,
+	.achivments {
+		width: calc(100% - 4%);
+	}
+
+	.work-entry-header {
+		flex-direction: column;
+		gap: .6rem;
+	}
+
 	.fixed-menu {
 		justify-content: center;
 		font-size: 1.2rem;
@@ -571,6 +819,31 @@ b {
 		height: auto;
 		min-height: 440px;
 		margin-top: 70px;
+	}
+
+	.work-timeline {
+		padding-left: 1.15rem;
+	}
+
+	.work-entry {
+		padding: 1.15rem;
+	}
+
+	.work-marker {
+		left: -1.47rem;
+	}
+
+	.education-card-header {
+		flex-direction: column;
+	}
+
+	.achievement-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.education-card,
+	.achievement-card {
+		padding: 1.15rem;
 	}
 
 	.skills {
