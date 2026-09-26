@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Mario Fernandes, Software Engineer specialising in high-performance systems and real-time simulation. C/C++, Docker, networking and air traffic control simulation software.">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/buttons.css">
@@ -96,6 +97,16 @@
 						<p>C++</p>
 					</div>
 					<div class="skills-Technical">
+						<!-- JavaScript -->
+						<iconify-icon icon="simple-icons:javascript" width="48"></iconify-icon>
+						<p>JavaScript</p>
+					</div>
+					<div class="skills-Technical">
+						<!-- Lua -->
+						<iconify-icon icon="simple-icons:lua" width="48"></iconify-icon>
+						<p>Lua</p>
+					</div>
+					<div class="skills-Technical">
 						<!-- Bash -->
 						<iconify-icon icon="simple-icons:gnubash" width="48"></iconify-icon>
 						<p>Bash</p>
@@ -142,15 +153,15 @@
 		<div class="about-me" style="padding-block: 20px;">
 			<h1>About Me.</h1>
 			<p>
-				I’m a First-Class (Hons) Computer Games graduate and Software Engineer at
-				Indra’s Micronav team in Bournemouth. My work spans software development,
-				troubleshooting complex technical systems, and turning intricate engineering
-				challenges into clean, user-focused solutions. Previously, I worked at Bridgeworks
-				Ltd, where I developed scalable software, containerised the PORTrockIT WAN-
-				acceleration product, and collaborated with OCF to improve IBM’s GPFS storage
-				performance. I enjoy working across full-stack and systems development, with
-				experience in C, C++, JavaScript, Lua, Bash, Docker, networking, and packet-level
-				analysis.
+				I’m a performance-focused Software Engineer working on high-performance systems and
+				real-time simulation. I’m currently at Indra’s Micronav team in Bournemouth, maintaining
+				a real-time 3D tower control simulator used for air traffic control training. Previously,
+				at Bridgeworks Ltd, I moved the flagship PORTrockIT WAN-acceleration product to a
+				Docker-based microservices architecture, optimised core data-transfer code in C and Bash,
+				and co-authored a published whitepaper with IBM Gold Partner OCF showing a 50x throughput
+				increase for IBM Storage Scale over high-latency WANs. I’m a First-Class (Hons) Computer
+				Games graduate with experience in C, C++, Lua, JavaScript, Bash, Docker, and diagnosing
+				complex network protocols at packet level.
 			</p>
 		</div>
 	</div>
@@ -166,16 +177,15 @@
 						<div>
 							<span class="work-status">Current role</span>
 							<h2>Indra – Micronav Simulations</h2>
-							<h3>Software Engineer <span>· Bournemouth</span></h3>
+							<h3>Software Engineer <span>· Maintenance team, Bournemouth</span></h3>
 						</div>
 						<time datetime="2026-06-01">Jun 2026 – Present</time>
 					</div>
-					<p class="work-summary">Supporting reliable air traffic control simulation software for commercial and military customers.</p>
+					<p class="work-summary">Maintaining Micronav BEST, a real-time 3D tower control simulator used for air traffic control training.</p>
 					<ul>
-						<li>Work on an <b>air traffic control training simulator</b> used by commercial and military customers.</li>
-						<li>Work with <b>C++</b> to investigate customer issues and fix bugs affecting simulator reliability.</li>
-						<li>Support radar simulation, <b>3D airport control tower views</b>, and custom airport and exercise creation.</li>
-						<li>Collaborate with the customer support team to investigate technical problems and deliver dependable solutions.</li>
+						<li>Joined the team maintaining <b>Micronav BEST</b>, a real-time 3D tower control simulator covering <b>radar, communications, and visual simulation</b>, following Indra’s acquisition of Micronav.</li>
+						<li>Resolve customer support tickets across the product’s <b>C++ / Embarcadero</b> codebase, using <b>SVN</b> for version control.</li>
+						<li>Building depth in real-time simulation through close collaboration with <b>field specialists</b> on the radar, communications, and visual subsystem architecture.</li>
 					</ul>
 				</article>
 				<article class="work-entry previous-role">
@@ -184,16 +194,16 @@
 						<div>
 							<span class="work-status">Previous role</span>
 							<h2>Bridgeworks Ltd</h2>
-							<h3>Software Engineer</h3>
+							<h3>Software Engineer <span>· Development team, Lymington</span></h3>
 						</div>
-						<time datetime="2022-12/2026-05">Dec 2022 – May 2026</time>
+						<time datetime="2022-09/2026-06">Sep 2022 – Jun 2026</time>
 					</div>
-					<p class="work-summary">Developed software across web, systems, and containerised WAN-acceleration products.</p>
+					<p class="work-summary">Built and modernised the PORTrockIT WAN-acceleration product across containers, C and Bash data-transfer code, and Lua/JavaScript tooling.</p>
 					<ul>
-						<li>Maintained and improved web applications using <b>JavaScript, Lua, HTML, and CSS</b>.</li>
-						<li>Helped the product team migrate applications into <b>Docker containers</b>.</li>
-						<li>Wrote and tested code in <b>C, Bash</b>, and other languages.</li>
-						<li>Took part in <b>code reviews</b>, troubleshooting, and Agile delivery.</li>
+						<li><b>Containerisation and modernisation:</b> spearheaded the move of the flagship product, PORTrockIT, to a <b>Docker-based microservices</b> architecture, keeping near-native performance and enabling software-only deployment on standard Linux with no specialised client hardware.</li>
+						<li><b>Systems engineering:</b> developed and optimised core data-transfer logic in <b>C and Bash</b> to reduce the effects of latency and packet loss on high-speed WANs.</li>
+						<li><b>Diagnostic tooling:</b> built responsive web interfaces in <b>Lua and JavaScript</b> that visualise backend telemetry and give enterprise users real-time system health data.</li>
+						<li><b>API design:</b> independently designed a <b>RESTful API (OpenAPI)</b> that exposes system telemetry and enables remote product configuration, with API-key and <b>JWT</b> authentication.</li>
 					</ul>
 				</article>
 			</div>
@@ -226,19 +236,20 @@
 			<h1 class="section-title">Achievements</h1>
 			<div class="achievement-grid">
 				<article class="achievement-card">
-					<span class="card-kicker">Industry collaboration</span>
+					<span class="card-kicker">Technical publication</span>
 					<h2>Project Celer</h2>
-					<h3>Bridgeworks Ltd &amp; OCF</h3>
-					<p class="card-summary">Collaborated with external companies to improve IBM GPFS storage performance and communicate the results to a technical audience.</p>
+					<h3>Bridgeworks Ltd &amp; IBM Gold Partner OCF</h3>
+					<p class="card-summary">Co-authored the whitepaper “IBM Storage Scale: Accelerating WAN data transfers with Bridgeworks PORTrockIT” (published 2025), validating how to avoid TCP/IP throughput collapse on high-latency, lossy links.</p>
 					<ul>
-						<li>Worked with <b>external companies and clients</b> on IBM GPFS storage performance.</li>
-						<li>Presented the technical optimisations at the <b>IBM GPFS User Group</b> in London.</li>
+						<li>Reached <b>938 MiB/s</b> (near line-rate) on a 10 Gb/s link at 100 ms latency, a <b>50x gain</b> over unaccelerated backup jobs.</li>
+						<li>Tested at up to <b>300 ms latency</b> and <b>0.1% packet loss</b>, using <b>parallel virtual TCP connections</b> through PORTrockIT nodes to bypass standard network bottlenecks for clustered file systems.</li>
+						<li>Presented the findings and optimisation strategies at the <b>IBM GPFS User Group</b> in London.</li>
 					</ul>
 				</article>
 				<article class="achievement-card">
 					<span class="card-kicker">Professional development</span>
 					<h2>IBM Professional Certificate</h2>
-					<h3>EdX · Cloud &amp; Application Development</h3>
+					<h3>EdX · Cloud &amp; Application Development Foundations</h3>
 					<p class="card-summary">Completed a four-month programme covering modern front-end, back-end, and cloud application development.</p>
 					<ul>
 						<li>Learned <b>HTML5, CSS, JavaScript, React, and Node.js</b>.</li>
