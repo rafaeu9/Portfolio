@@ -1,37 +1,74 @@
-function getFolders(path, container) {
-	$.ajax({
-		url: path, // URL to fetch directories
-		type: 'GET',
-		dataType: 'json', // Expecting a JSON response
-		success: function(directories) {
-			directories.forEach(function(dir) {
-				loadContent('/' + path + '/' + dir, container); // Call the loadContent function for each directory
-			});
+const projectCollections = {
+	bestProjects: [
+		{
+			title: 'Crowd Maker (Unity Tool)',
+			description: 'Crowd Maker is a tool developed for Unity with the objective of helping developers create crowds on their own games.',
+			image: 'best-projects/crowd maker/vSGIKI.png',
+			content: 'best-projects/crowd maker/content.html'
 		},
-		error: function(error) {
-			console.error('Error fetching project folders:', error);
-			alert("Error fetching project folders.");
+		{
+			title: 'Binger Ninja',
+			description: "Binger Ninja is a 2D isometric action RPG in which the player controls an overweight ninja who's sole goal is to get to the top of the tower to save Tadashi's daughter.",
+			image: 'best-projects/binger ninja/MtptaJ.png',
+			content: 'best-projects/binger ninja/content.html'
+		},
+		{
+			title: 'Race Game (DirectX)',
+			description: 'This demo was created as part of a university project, in it, my objective was to explore the DirectX11 SDK and try to make a game from the ground up.',
+			image: 'best-projects/race game/Screenshot 2022-09-11 223625.png',
+			content: 'best-projects/race game/content.html'
 		}
-	});
-}
+	],
+	projects: [
+		{
+			title: 'Betting Game (SDL)',
+			description: 'Simple game using C++ with SDL where the objective is for the player to bet points on the colour with the most amount.',
+			image: 'projects/betting game (sdl)/Screenshot 2022-01-31 231458.png',
+			content: 'projects/betting game (sdl)/content.html'
+		},
+		{
+			title: 'Paladin',
+			description: 'In this game, you control a paladin trying to escape from a cave full of monsters.',
+			image: 'projects/paladin/Print/2.png',
+			content: 'projects/paladin/content.html'
+		},
+		{
+			title: 'Photon Project',
+			description: 'In this demo, I explored a tool in Unity named Photon. This tool lets me connect players with each other creating an online experience.',
+			image: 'projects/photon project/Picture1.png',
+			content: 'projects/photon project/content.html'
+		}
+	]
+};
 
-function loadContent(path, container) {
-	$.ajax({
-		url: path + "/projects.html", // Path to the HTML content
-		type: 'GET',
-		success: function(data) {
-			$(container).append(data); // Inject the content into the best-projects div
-		},
-		error: function(error) {
-			console.error("Error loading content:", error);
-			alert("Error loading project content.");
-		}
-	});
+function renderProjectCards(projects, selector) {
+	const container = document.querySelector(selector);
+	if (!container) {
+		return;
+	}
+
+	container.innerHTML = projects.map((project) => {
+		const safeImage = encodeURI(project.image);
+		const safeContent = encodeURI(project.content);
+
+		return `
+			<div class="projects">
+				<div class="projects-image">
+					<img src="${safeImage}" alt="${project.title}">
+				</div>
+				<div class="projects-text">
+					<h2>${project.title}</h2>
+					<p>${project.description}</p>
+					<button type="button" class="button-basic" onclick="createContainer('${safeContent}')">Read more</button>
+				</div>
+			</div>
+		`;
+	}).join('');
 }
 
 $(document).ready(function() {
-	getFolders('list/best-projects', ".best-projects-container");
-	getFolders('list/projects', ".projects-container");
+	renderProjectCards(projectCollections.bestProjects, '.best-projects-container');
+	renderProjectCards(projectCollections.projects, '.projects-container');
 });
 
 $.fn.shadow = function() {
@@ -39,8 +76,6 @@ $.fn.shadow = function() {
 }
 
 function createContainer(file){
-	console.log("creating a container");
-
 	var body = document.getElementsByTagName("body")[0],
 		veil = document.createElement("div"),
 		container = document.createElement("div");
