@@ -78,7 +78,7 @@ ul li {
 }
 
 p {
-	font-size: 120%;
+	font-size: 140%;
 	line-height: 1.6;
 }
 
@@ -430,8 +430,8 @@ b {
 
 .about-me{
 	color: var(--text-color);
-	max-width: 1500px;
-	margin: 4%;
+	max-width: 1100px;
+	margin: 2%;
 	h1 {
 		color: var(--button-hover-color);
 	}
